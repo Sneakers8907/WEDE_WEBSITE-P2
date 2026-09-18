@@ -1,0 +1,397 @@
+
+:root {
+    --dark-brown: #2e1b16;
+    --brown: #4e342e;
+    --medium-brown: #795548;
+    --light-brown: #c19a7b;
+    --cream: #f4eee9;
+    --gray: #777777;
+    --light-gray: #d6d6d6;
+    --white: #ffffff;
+    --black: #171717;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cream);
+    color: var(--dark-brown);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--dark-brown);
+    color: var(--white);
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header > img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--light-brown);
+    letter-spacing: 2px;
+}
+
+.logo p {
+    margin: 0;
+    color: var(--light-gray);
+}
+
+header nav {
+    width: 100%;
+    background-color: var(--brown);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--light-brown);
+    color: var(--dark-brown);
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+#hero {
+    min-height: 450px;
+    padding: 80px 40px;
+    margin-bottom: 30px;
+
+    background:
+        linear-gradient(
+            rgba(46, 27, 22, 0.85),
+            rgba(46, 27, 22, 0.85)
+        ),
+        url("../_images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: var(--white);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+#hero h2 {
+    font-size: 2.8rem;
+    margin: 0 0 15px;
+    color: var(--light-brown);
+}
+
+#hero p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: var(--white);
+}
+
+.cta-button {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 12px 25px;
+
+    background-color: var(--light-brown);
+    color: var(--dark-brown);
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 6px;
+    border: 2px solid var(--light-brown);
+
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+#intro {
+    background-color: var(--white);
+    border-left: 8px solid var(--light-brown);
+
+    padding: 35px;
+    margin-bottom: 30px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+#intro h2 {
+    color: var(--dark-brown);
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+#intro p {
+    color: var(--gray);
+}
+
+#intro a {
+    color: var(--brown);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#intro a:hover {
+    color: var(--light-brown);
+}
+
+#highlights {
+    background-color: var(--brown);
+    padding: 40px;
+    margin-bottom: 30px;
+
+    border-radius: 10px;
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#highlights h2 {
+    color: var(--light-brown);
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+
+/* Turn your existing category <ul> into cards */
+#highlights ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 0;
+}
+
+#highlights li {
+    background-color: var(--light-brown);
+    color: var(--dark-brown);
+
+    padding: 30px 15px;
+    border-radius: 10px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    border: 2px solid transparent;
+
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+#highlights li:hover {
+    transform: translateY(-5px);
+    background-color: var(--cream);
+    border-color: var(--light-brown);
+}
+
+#call-to-action {
+    background-color: var(--dark-brown);
+    color: var(--white);
+
+    padding: 50px 30px;
+    margin-bottom: 30px;
+
+    border-radius: 10px;
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+#call-to-action h2 {
+    color: var(--light-brown);
+    font-size: 2rem;
+}
+
+#call-to-action p {
+    color: var(--light-gray);
+}
+
+footer {
+    background-color: var(--dark-brown);
+    color: var(--light-gray);
+
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer nav {
+    margin-bottom: 20px;
+}
+
+footer nav a {
+    color: var(--light-gray);
+}
+
+footer nav a:hover {
+    color: var(--dark-brown);
+}
+
+footer p {
+    margin: 15px 0 0;
+    color: var(--gray);
+}
+
+@media (max-width: 900px) {
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo {
+        flex: none;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    #hero h2 {
+        font-size: 2.2rem;
+    }
+
+    #highlights ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    header {
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    header > img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo p {
+        font-size: 0.9rem;
+    }
+
+    header nav {
+        padding: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav li,
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    #hero {
+        min-height: 400px;
+        padding: 50px 20px;
+    }
+
+    #hero h2 {
+        font-size: 1.9rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    #intro,
+    #highlights,
+    #call-to-action {
+        padding: 25px 20px;
+    }
+
+    #highlights ul {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-button {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+    }
+}
